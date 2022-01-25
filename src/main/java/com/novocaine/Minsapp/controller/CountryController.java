@@ -22,7 +22,7 @@ public class CountryController {
 	@Autowired
 	private CountriesService countriesservice; 
 	
-	@GetMapping("/countries")
+	@GetMapping("/global/countries")
 	public String getContries(Model model) {
 		
 		List<Country> countryList = countryservice.getCountries();
@@ -38,12 +38,12 @@ public class CountryController {
 //		}
 		//model.addAttribute("countries", countryList);
 		model.addAttribute("countries", countriesList);
-		return "County";
+		return "/global/County";
 	}
 	
-	@PostMapping("/countries/addNew")
+	@PostMapping("/global/countries/addNew")
 	public String addNew(Country country) {
 		countryservice.save(country);
-		return "redirect:/countries";
+		return "redirect:/global/countries";
 	}
 }

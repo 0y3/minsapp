@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmls:th="http://www.thymleaf.org"
+	xmls:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="fragments/layout">
+	
+	<body>
+		<div layout:fragment="content" id="content_layout">
+			<section class="wrapper">
+		        <!--overview start-->
+		        
+		        <!--Breadcrumb-->
+		        <div class="row">
+		          <div class="col-lg-12">
+		            <h3 class="page-header"><i class="fa fa-bars"></i> Blank</h3>
+		            <ol class="breadcrumb">
+		              <li><i class="fa fa-home"></i><a th:href="@{/index}">Home</a></li>
+		              <li><i class="fa fa-bars"></i>page</li>
+		              <li><i class="fa fa-square-o"></i>Pages</li>
+		            </ol>
+		          </div>
+		        </div>
+		        
+		        <!-- page start-->
+		        <h1>List of Blank</h1>
+		        <!-- page end-->
+		
+		      </section>
+		</div>
+	</body>
+	
+</html>
